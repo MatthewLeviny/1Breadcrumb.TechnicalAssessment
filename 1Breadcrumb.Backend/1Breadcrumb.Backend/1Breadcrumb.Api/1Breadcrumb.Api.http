@@ -1,0 +1,10 @@
+### Get all books
+GET http://localhost:5000/Book
+Accept: application/json
+
+###
+
+### Update book availability
+PATCH http://localhost:5000/Book/1/availability
+Content-Type: application/json
+Accept: application/json
