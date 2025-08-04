@@ -11,7 +11,7 @@ export async function fetchBooks(): Promise<Book[]> {
 
 export async function updateBookAvailability(bookId: string, newAvailable: boolean): Promise<void> {
     const response = await apiClient.patch(`/book/${bookId}/availability`, newAvailable);
-    if (response.status !== 204) {
+    if (response.status !== 200) {
         throw new Error('Failed to update book availability');
     }
 }
